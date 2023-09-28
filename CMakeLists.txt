@@ -7,7 +7,7 @@ else()
 endif()
 
 
-project(allocator VERSION 0.0.1.${BUILD_NUMBER})
+project(templates VERSION 0.0.1.${BUILD_NUMBER})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
@@ -19,7 +19,7 @@ target_include_directories(appTest PRIVATE include)
 target_link_libraries(appTest ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
-    CXX_STANDARD 17
+    CXX_STANDARD 20
     CXX_STANDARD_REQUIRED ON
     COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
 )
